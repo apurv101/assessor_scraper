@@ -1,5 +1,8 @@
 # assessor_scraper
 
+
+
+## AWS
 sudo apt update
 sudo apt install python3-pip -y
 pip3 install selenium flask usaddress
@@ -63,3 +66,18 @@ curl https://giant-mayfly-84.localtunnel.me/san_mateo -d '{"address_string": "52
 curl http://127.0.0.1:5000/los_angeles -d '{"address_string": "3836 hayvenhurst ave"}' -H 'Content-Type: application/json'
 
 curl https://giant-mayfly-84.localtunnel.me/los_angeles -d '{"address_string": "3836 hayvenhurst ave"}' -H 'Content-Type: application/json'
+
+
+
+
+## HEROKU
+
+git add .
+git commit -m "First Commit"
+git remote -v
+heroku buildpacks:add heroku/chromedriver
+heroku buildpacks:add heroku/python
+heroku buildpacks:add heroku/google-chrome
+git push heroku master
+
+curl https://sleepy-dawn-51371.herokuapp.com/san_mateo -d '{"address_string": "527 miller ave, south san francisco"}' -H 'Content-Type: application/json'

@@ -113,9 +113,13 @@ def san_mateo():
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    if system == "Darwin":
+        app.run(debug=True)
+    else:
+        app.run(host='0.0.0.0', port=80)
 
 # if __name__ == '__main__':
-#     app.run(host='0.0.0.0', port=80)
+#     
     
