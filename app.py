@@ -8,10 +8,15 @@ from scraping_sacramento import perform_scraping_sacramento
 from scraping_san_francisco import perform_scraping_sfo
 from scraping_san_mateo import perform_scraping_san_mateo
 from scraping_la import perform_scraping_la
-# import threading
+import threading
 from multiprocessing import Pool
 import json
 import os
+import logging
+
+
+format = "%(asctime)s: %(message)s"
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # print(dir_path + "/geckodriver_mac")
 import platform
@@ -44,10 +49,16 @@ def alameda():
         data = request.data
         address_string_a = json.loads(data)['address_string']
         # Start a worker processes
-        pool = Pool(processes=1)              
+        # pool = Pool(processes=1)              
         # Evaluate "f(10)" asynchronously calling callback when finished.
-        pool.apply_async(perform_scraping, [address_string_a, "chrome", True, chrome_path, firefox_path]) 
+        # pool.apply_async(perform_scraping, [address_string_a, "chrome", True, chrome_path, firefox_path]) 
 
+        logging.basicConfig(format=format, level=logging.INFO, datefmt="%H:%M:%S")
+        logging.info("Main    : before creating thread")
+        x = threading.Thread(target=perform_scraping, args=(address_string_a, "chrome", True, chrome_path, firefox_path,))
+        logging.info("Main    : before running thread")
+        x.start()
+        logging.info("Main    : wait for the thread to finish")
         # link_map = perform_scraping(address_string_a, "chrome", True, chrome_path, firefox_path)
 
         # return make_response(jsonify(link_map))

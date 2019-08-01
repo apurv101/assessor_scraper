@@ -49,7 +49,9 @@ curl 54.145.187.235/alameda -d '{"address_string": "2313 Oregon St, Berkeley, CA
 
 curl http://127.0.0.1:5000/alameda -d '{"address_string": "2313 Oregon St, Berkeley, CA"}' -H 'Content-Type: application/json'
 
-curl https://giant-mayfly-84.localtunnel.me/alameda -d '{"address_string": "2313 Oregon St, Berkeley, CA"}' -H 'Content-Type: application/json'
+curl http://127.0.0.1:5000/alameda -d '{"address_string": "2313 Oregon St, Berkeley, CA"}' -H 'Content-Type: application/json'
+
+curl 54.145.187.235/alameda -d '{"address_string": "2313 Oregon St, Berkeley, CA"}' -H 'Content-Type: application/json'
 
 curl http://127.0.0.1:5000/sacramento -d '{"address_string": "4816 Emerson st"}' -H 'Content-Type: application/json'
 
@@ -64,6 +66,8 @@ curl http://127.0.0.1:5000/san_mateo -d '{"address_string": "527 miller ave, sou
 curl https://giant-mayfly-84.localtunnel.me/san_mateo -d '{"address_string": "527 miller ave, south san francisco"}' -H 'Content-Type: application/json'
 
 curl http://127.0.0.1:5000/los_angeles -d '{"address_string": "3836 hayvenhurst ave"}' -H 'Content-Type: application/json'
+
+curl 54.145.187.235/los_angeles -d '{"address_string": "3836 hayvenhurst ave"}' -H 'Content-Type: application/json'
 
 curl https://giant-mayfly-84.localtunnel.me/los_angeles -d '{"address_string": "3836 hayvenhurst ave"}' -H 'Content-Type: application/json'
 
