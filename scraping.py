@@ -269,7 +269,14 @@ def perform_scraping(address_string, browser, headless, chrome_path, firefox_pat
         print(link_to_map)
         print(part2a)
 
+
+        f = open("alameda.txt", "w")
+        f.write( all_data  )      # str() converts to string
+        f.close()
+
         return all_data
+
+
 
 
     except Exception as e:

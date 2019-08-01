@@ -13,6 +13,26 @@ from multiprocessing import Pool
 import json
 import os
 import logging
+import sys
+
+
+# Default daemon parameters.
+# File mode creation mask of the daemon.
+UMASK = 0
+
+# Default working directory for the daemon.
+WORKDIR = "/"
+
+# Default maximum for the number of available file descriptors.
+MAXFD = 1024
+
+# The standard I/O file descriptors are redirected to /dev/null by default.
+if (hasattr(os, "devnull")):
+   REDIRECT_TO = os.devnull
+else:
+   REDIRECT_TO = "/dev/null"
+
+
 
 
 # format = "%(asctime)s: %(message)s"
