@@ -13,8 +13,8 @@ import json
 app = Flask(__name__)
 
 
-firefox_path = "/Users/apoorv/Hausable/selenium_scraping/app/geckodriver"
-chrome_path = "/Users/apoorv/Hausable/selenium_scraping/app/chromedriver"
+firefox_path = "/Users/apoorv/Hausable/selenium_scraping/app/geckodriver_mac"
+chrome_path = "/Users/apoorv/Hausable/selenium_scraping/app/chromedriver_mac"
 
 # firefox_path = "/home/ubuntu/drivers/geckodriver"
 # chrome_path = "/home/ubuntu/drivers/chromedriver"
