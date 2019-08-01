@@ -128,7 +128,11 @@ def perform_scraping_san_mateo(address_string, browser, headless, chrome_path, f
         print(e)
         all_data = {}
         all_data["apn"] = "Something Went wrong"
-        return all_data
+
+        print(all_data)
+        return "OK"
+
+
 
     finally:
         pass

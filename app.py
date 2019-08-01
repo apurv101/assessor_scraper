@@ -8,7 +8,8 @@ from scraping_sacramento import perform_scraping_sacramento
 from scraping_san_francisco import perform_scraping_sfo
 from scraping_san_mateo import perform_scraping_san_mateo
 from scraping_la import perform_scraping_la
-
+import threading
+from multiprocessing import Pool
 import json
 app = Flask(__name__)
 
@@ -29,9 +30,16 @@ def alameda():
     if request.method == 'POST':
         data = request.data
         address_string_a = json.loads(data)['address_string']
+        # Start a worker processes
+        pool = Pool(processes=1)              
+        # Evaluate "f(10)" asynchronously calling callback when finished.
+        pool.apply_async(perform_scraping, [address_string_a, "chrome", True, chrome_path, firefox_path]) 
 
-        link_map = perform_scraping(address_string_a, "chrome", True, chrome_path, firefox_path)
-        return make_response(jsonify(link_map))
+        # link_map = perform_scraping(address_string_a, "chrome", True, chrome_path, firefox_path)
+
+        # return make_response(jsonify(link_map))
+        print("OK")
+        return "OK"
     else:
         return make_response("test")
 
@@ -76,8 +84,15 @@ def san_mateo():
         data = request.data
         address_string_a = json.loads(data)['address_string']
 
-        link_map = perform_scraping_san_mateo(address_string_a, "chrome", True, chrome_path, firefox_path)
-        return make_response(jsonify(link_map))
+        pool = Pool(processes=1)              
+        # Evaluate "f(10)" asynchronously calling callback when finished.
+        pool.apply_async(perform_scraping, [address_string_a, "chrome", True, chrome_path, firefox_path]) 
+
+        # link_map = perform_scraping(address_string_a, "chrome", True, chrome_path, firefox_path)
+
+        # return make_response(jsonify(link_map))
+        print("OK")
+        return "OK"
     else:
         return make_response("test")
 
