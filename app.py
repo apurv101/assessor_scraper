@@ -76,7 +76,7 @@ def san_mateo():
         data = request.data
         address_string_a = json.loads(data)['address_string']
 
-        link_map = perform_scraping_san_mateo(address_string_a, "firefox", False, chrome_path, firefox_path)
+        link_map = perform_scraping_san_mateo(address_string_a, "chrome", True, chrome_path, firefox_path)
         return make_response(jsonify(link_map))
     else:
         return make_response("test")

@@ -2547,3 +2547,54 @@ console.error: BroadcastService:
 ###!!! [Child][MessageChannel] Error: (msgtype=0x53000D,name=PHttpChannel::Msg_RemoveCorsPreflightCacheEntry) Closed channel: cannot send/recv
 
 1562230622027	Marionette	INFO	Stopped listening on port 58840
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1564600751605	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/1f/7ghh6q7s2772bzqg_0s9yx_00000gn/T/rust_mozprofile.C6Be04ih0glq"
+*** You are running in headless mode.
+1564600752764	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564600752764	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564600752764	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564600752764	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564600755572	Marionette	INFO	Listening on port 52329
+1564600755629	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://assessorparcelviewer.saccounty.net/arcgis_js_api/dojo/dojo.js?v3.29, line 1455: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://assessorparcelviewer.saccounty.net/arcgis_js_api/dojo/dojo.js?v3.29, line 1455: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://assessorparcelviewer.saccounty.net/arcgis_js_api/dojo/dojo.js?v3.29, line 1455: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://assessorparcelviewer.saccounty.net/arcgis_js_api/dojo/dojo.js?v3.29, line 1455: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://assessorparcelviewer.saccounty.net/arcgis_js_api/dojo/dojo.js?v3.29, line 1343: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://assessorparcelviewer.saccounty.net/arcgis_js_api/dojo/dojo.js?v3.29, line 1343: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://assessorparcelviewer.saccounty.net/arcgis_js_api/dojo/dojo.js?v3.29, line 1343: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: http://assessorparcelviewer.saccounty.net/arcgis_js_api/dojo/dojo.js?v3.29, line 1343: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1564600792231	Marionette	INFO	Stopped listening on port 52329
+1564602696619	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/1f/7ghh6q7s2772bzqg_0s9yx_00000gn/T/rust_mozprofile.d9yGosCSUz8y"
+*** You are running in headless mode.
+1564602697332	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1564602697332	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1564602697333	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1564602697333	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1564602699723	Marionette	INFO	Listening on port 53091
+1564602699785	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://js.arcgis.com/3.26/, line 1187: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://js.arcgis.com/3.26/, line 1187: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://js.arcgis.com/3.26/, line 1187: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://js.arcgis.com/3.26/, line 1187: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://js.arcgis.com/3.26/, line 1071: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://js.arcgis.com/3.26/, line 1071: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://js.arcgis.com/3.26/, line 1071: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://js.arcgis.com/3.26/, line 1071: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://sfplanninggis.org/pim/js/pim.js?v=3.17, line 1810: TypeError: map.graphics is null
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
