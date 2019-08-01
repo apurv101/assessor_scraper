@@ -8,14 +8,23 @@ from scraping_sacramento import perform_scraping_sacramento
 from scraping_san_francisco import perform_scraping_sfo
 from scraping_san_mateo import perform_scraping_san_mateo
 from scraping_la import perform_scraping_la
-import threading
+# import threading
 from multiprocessing import Pool
 import json
+# import os
+import platform
+
+system = platform.system()
+print(system)
+
 app = Flask(__name__)
 
-
-firefox_path = "/Users/apoorv/Hausable/selenium_scraping/app/geckodriver_mac"
-chrome_path = "/Users/apoorv/Hausable/selenium_scraping/app/chromedriver_mac"
+if system == "Darwin":
+    firefox_path = "/Users/apoorv/Hausable/selenium_scraping/app/geckodriver_mac"
+    chrome_path = "/Users/apoorv/Hausable/selenium_scraping/app/chromedriver_mac"
+else:
+    firefox_path = "/Users/apoorv/Hausable/selenium_scraping/app/geckodriver_linux"
+    chrome_path = "/Users/apoorv/Hausable/selenium_scraping/app/chromedriver_linux"
 
 # firefox_path = "/home/ubuntu/drivers/geckodriver"
 # chrome_path = "/home/ubuntu/drivers/chromedriver"
@@ -86,7 +95,7 @@ def san_mateo():
 
         pool = Pool(processes=1)              
         # Evaluate "f(10)" asynchronously calling callback when finished.
-        pool.apply_async(perform_scraping, [address_string_a, "chrome", True, chrome_path, firefox_path]) 
+        pool.apply_async(perform_scraping_san_mateo, [address_string_a, "chrome", True, chrome_path, firefox_path]) 
 
         # link_map = perform_scraping(address_string_a, "chrome", True, chrome_path, firefox_path)
 
