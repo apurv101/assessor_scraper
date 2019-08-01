@@ -11,7 +11,9 @@ from scraping_la import perform_scraping_la
 # import threading
 from multiprocessing import Pool
 import json
-# import os
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
+# print(dir_path + "/geckodriver_mac")
 import platform
 
 system = platform.system()
@@ -20,12 +22,14 @@ print(system)
 app = Flask(__name__)
 
 if system == "Darwin":
-    firefox_path = "/Users/apoorv/Hausable/selenium_scraping/app/geckodriver_mac"
-    chrome_path = "/Users/apoorv/Hausable/selenium_scraping/app/chromedriver_mac"
+    firefox_path = dir_path + "/geckodriver_mac"
+    chrome_path = dir_path + "/chromedriver_mac"
 else:
-    firefox_path = "/Users/apoorv/Hausable/selenium_scraping/app/geckodriver_linux"
-    chrome_path = "/Users/apoorv/Hausable/selenium_scraping/app/chromedriver_linux"
+    firefox_path = dir_path + "/geckodriver_linux"
+    chrome_path = dir_path + "/chromedriver_linux"
 
+print(firefox_path)
+print(chrome_path)
 # firefox_path = "/home/ubuntu/drivers/geckodriver"
 # chrome_path = "/home/ubuntu/drivers/chromedriver"
 

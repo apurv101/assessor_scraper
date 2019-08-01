@@ -7,6 +7,10 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update
 sudo apt-get install google-chrome-stable -y
+sudo apt install firefox -y
+
+
+
 mkdir drivers
 cd drivers
 wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
@@ -14,7 +18,10 @@ wget https://chromedriver.storage.googleapis.com/75.0.3770.90/chromedriver_linux
 sudo apt install unzip -y
 unzip chromedriver_linux64.zip
 tar xvzf geckodriver-v0.24.0-linux64.tar.gz
-sudo apt install firefox -y
+
+
+
+
 cd ..
 
 psudo() { sudo env PATH="$PATH" "$@"; } 
