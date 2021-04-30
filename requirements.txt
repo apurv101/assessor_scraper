@@ -8,6 +8,6 @@ MarkupSafe==1.1.1
 probableparsing==0.0.1
 python-crfsuite==0.9.6
 selenium==3.141.0
-urllib3==1.25.3
+urllib3==1.25.8
 usaddress==0.5.10
 Werkzeug==0.15.4
